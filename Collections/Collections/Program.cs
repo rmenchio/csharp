@@ -99,7 +99,7 @@ class Program
         #endregion
 
         #region Lists
-
+        /*
         List<Animal> listAnimals = new()
         {
             gato,
@@ -166,7 +166,53 @@ class Program
         }
 
         Console.ReadLine();
+        */
 
+        #endregion
+
+        #region Sets
+        /*
+         * Propriedades do Set: 
+         *  Não permite duplicidade.
+         *  Não se sabe onde um elemento adicionado irá ser incluido.
+         *  HashSet é mais rápido do que lista.
+         */
+        ISet<Animal> setAnimals = new HashSet<Animal>();
+
+        setAnimals.Add(gato);
+        setAnimals.Add(cachorro);
+        setAnimals.Add(papagaio);
+
+        Console.WriteLine("Imprimindo Set");
+
+        foreach (Animal animal in setAnimals)
+        {
+            Console.WriteLine(animal);
+        }
+
+        Console.WriteLine("Adicionando elemento duplicado para observar comportamento do Set");
+
+        setAnimals.Add(papagaio);
+
+        foreach (Animal animal in setAnimals)
+        {
+            Console.WriteLine(animal);
+        }
+
+        Console.WriteLine("Para ordenar, vamos primeiro transformar para list...");
+
+        var listByHashset = setAnimals.ToList();
+
+        listByHashset.Sort((x, y) => x.Name.CompareTo(y.Name));
+
+        setAnimals = listByHashset.ToHashSet();
+
+        foreach (Animal animal in setAnimals)
+        {
+            Console.WriteLine(animal);
+        }
+
+        Console.ReadLine();
         #endregion
     }
 }
