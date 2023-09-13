@@ -171,48 +171,111 @@ class Program
         #endregion
 
         #region Sets
-        /*
-         * Propriedades do Set: 
-         *  Não permite duplicidade.
-         *  Não se sabe onde um elemento adicionado irá ser incluido.
-         *  HashSet é mais rápido do que lista.
+        ///*
+        // * Propriedades do Set: 
+        // *  Não permite duplicidade.
+        // *  Não se sabe onde um elemento adicionado irá ser incluido.
+        // *  HashSet é mais rápido do que lista.
+        // */
+        //ISet<Animal> setAnimals = new HashSet<Animal>();
+
+        //setAnimals.Add(gato);
+        //setAnimals.Add(cachorro);
+        //setAnimals.Add(papagaio);
+
+        //Console.WriteLine("Imprimindo Set");
+
+        //foreach (Animal animal in setAnimals)
+        //{
+        //    Console.WriteLine(animal);
+        //}
+
+        //Console.WriteLine("Adicionando elemento duplicado para observar comportamento do Set");
+
+        //setAnimals.Add(papagaio);
+
+        //foreach (Animal animal in setAnimals)
+        //{
+        //    Console.WriteLine(animal);
+        //}
+
+        //Console.WriteLine("Para ordenar, vamos primeiro transformar para list...");
+
+        //var listByHashset = setAnimals.ToList();
+
+        //listByHashset.Sort((x, y) => x.Name.CompareTo(y.Name));
+
+        //setAnimals = listByHashset.ToHashSet();
+
+        //foreach (Animal animal in setAnimals)
+        //{
+        //    Console.WriteLine(animal);
+        //}
+
+        //Console.ReadLine();
+        #endregion
+
+        #region Dictionary
+
+        /* 
+         * Dicionários não permitem adicionar com a mesma chave.
+         * É melhor adicionar com TryAdd.
          */
-        ISet<Animal> setAnimals = new HashSet<Animal>();
 
-        setAnimals.Add(gato);
-        setAnimals.Add(cachorro);
-        setAnimals.Add(papagaio);
+        IDictionary<int, Animal> animalsDict = new Dictionary<int, Animal>();
 
-        Console.WriteLine("Imprimindo Set");
+        animalsDict.Add(1, gato);
+        animalsDict.TryAdd(1, cachorro);
+        animalsDict.TryAdd(2, papagaio);
 
-        foreach (Animal animal in setAnimals)
+        foreach(var obj in animalsDict)
         {
-            Console.WriteLine(animal);
+            Console.WriteLine("Chave: {0}, Valor: {1}", obj.Key, obj.Value);
         }
 
-        Console.WriteLine("Adicionando elemento duplicado para observar comportamento do Set");
+        animalsDict.TryAdd(3, cachorro);
 
-        setAnimals.Add(papagaio);
+        int chave = 2;
 
-        foreach (Animal animal in setAnimals)
+        if(animalsDict.TryGetValue(chave, out var animal))
         {
-            Console.WriteLine(animal);
-        }
-
-        Console.WriteLine("Para ordenar, vamos primeiro transformar para list...");
-
-        var listByHashset = setAnimals.ToList();
-
-        listByHashset.Sort((x, y) => x.Name.CompareTo(y.Name));
-
-        setAnimals = listByHashset.ToHashSet();
-
-        foreach (Animal animal in setAnimals)
-        {
-            Console.WriteLine(animal);
+            Console.WriteLine("Na chave {0} está o {1}", chave, animal.Name);
         }
 
         Console.ReadLine();
+
+        #endregion
+
+        #region Testes aleatórios
+        //var lista = new List<Item>
+        //{
+        //    new Item("aline", 1, 3),
+        //    new Item("bruna", 1, 3),
+        //    new Item("carol", 1, 3),
+
+        //    new Item("denise", 2, 2),
+        //    new Item("irene", 2, 5),
+        //    new Item("fatima", 2, 4),
+
+        //    new Item("elisa", 3, 4),
+        //    new Item("gabriela", 3, 4),
+
+        //    new Item("hanna", 4, 2)
+        //};
+
+        //var nova = lista.GroupBy(i => i.Id);
+
+        //foreach(var i in nova)
+        //{
+        //    if (i.Count() == i.Where(i => i.Status == 4).Count())
+        //    {
+        //        Console.WriteLine("está tudo faturado no id {0}", i.Key);
+        //    }
+        //}
+
+        //Console.ReadLine();
         #endregion
     }
+
+    //public record Item(string Nome, int Id, int Status);
 }
