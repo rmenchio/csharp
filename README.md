@@ -1,2 +1,2 @@
 # csharp
-A repository focused on c# fundamentals and concepts.
+Um repositório focado em fundamentos e conceitos de C#.
