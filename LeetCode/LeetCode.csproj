@@ -12,7 +12,6 @@
     <None Remove="Easy\9\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Easy\" />
     <Folder Include="Easy\9\" />
   </ItemGroup>
 </Project>

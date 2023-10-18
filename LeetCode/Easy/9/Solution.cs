@@ -2,7 +2,7 @@
  * Given an integer x, return true if x is a palindrome, and false otherwise.
  */
 
-namespace LeetCode.Easy.Nine
+namespace LeetCode.Easy._9
 {
 	public class Solution
 	{
