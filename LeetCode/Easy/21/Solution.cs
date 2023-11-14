@@ -12,55 +12,31 @@
     public class Solution
     {
         public ListNode MergeTwoLists(ListNode list1, ListNode list2)
-        {
-            ListNode novaLista = null;
-            ListNode cabeca = novaLista;
-
+        {   
             if (list1 == null)
                 return list2;
 
-            if (list2 == null)
+            else if (list2 == null)
                 return list1;
+
+            ListNode novaLista = InicializandoNovaLista(ref list1, ref list2);
+            ListNode cabeca = novaLista;
 
             while (list1 != null && list2 != null)
             {
-                if(novaLista == null)
+                if(novaLista.val <= list1.val && list1.val <= list2.val)
                 {
-                    var numeroUm = list1.val;
-                    var numeroDois = list2.val;
-
-                    if (numeroUm <= numeroDois)
-                    {
-                        novaLista = new ListNode(numeroUm);
-                        list1 = list1.next;
-                    }
-                    else
-                    {
-                        novaLista = new ListNode(numeroDois);
-                        list2 = list2.next;
-                    }
-                    cabeca = novaLista;
-                    continue;
-                }
-
-                var numeroAtual = novaLista.val;
-                var numeroUmAtual = list1.val;
-                var numeroDoisAtual = list2.val;
-
-                if(numeroAtual <= numeroUmAtual && numeroUmAtual <= numeroDoisAtual)
-                {
-                    novaLista.next = new ListNode(numeroUmAtual);
+                    novaLista.next = list1;
                     list1 = list1.next;
                 }
 
-                else if (numeroAtual <= numeroDoisAtual && numeroDoisAtual <= numeroUmAtual)
+                else if (novaLista.val <= list2.val && list2.val <= list1.val)
                 {
-                    novaLista.next = new ListNode(numeroDoisAtual);
+                    novaLista.next = list2;
                     list2 = list2.next;
                 }
 
                 novaLista = novaLista.next;
-                GC.Collect();
             }
 
             if (list1 == null && list2 != null)
@@ -69,6 +45,25 @@
                 novaLista.next = list1;
 
             return cabeca;
+        }
+
+        private static ListNode InicializandoNovaLista(ref ListNode list1, ref ListNode list2)
+        {
+            ListNode novaLista = new();
+
+            if (list1.val <= list2.val)
+            {
+                novaLista.val = list1.val;
+                list1 = list1.next;
+            }
+            else
+            {
+                novaLista.val = list2.val;
+                list2 = list2.next;
+                
+            }
+
+            return novaLista;
         }
     }
 }
