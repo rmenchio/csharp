@@ -60,6 +60,7 @@
                 }
 
                 novaLista = novaLista.next;
+                GC.Collect();
             }
 
             if (list1 == null && list2 != null)
