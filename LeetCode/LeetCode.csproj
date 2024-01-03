@@ -12,10 +12,12 @@
     <None Remove="Easy\9\" />
     <None Remove="Easy\20\" />
     <None Remove="Easy\21\" />
+    <None Remove="Easy\26\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Easy\9\" />
     <Folder Include="Easy\20\" />
     <Folder Include="Easy\21\" />
+    <Folder Include="Easy\26\" />
   </ItemGroup>
 </Project>
