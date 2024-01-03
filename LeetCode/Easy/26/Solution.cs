@@ -1,40 +1,27 @@
 ﻿namespace LeetCode.Easy._26
 {
-	public class Solution
-	{
-        int qntUnico = 0;
-        List<int> numerosUnicos = new();
-
+    public class Solution
+    {
         public int RemoveDuplicates(int[] nums)
         {
-            int contador = 0;
+            if (nums.Length == 0)
+                return 0;
 
-            for (int j = 0; j < nums.Length; j = j)
+            int qntUnico = 1;
+
+            for (int i = 1; i < nums.Length; i++)
             {
-                int num = nums[j];
-
-                if (!numerosUnicos.Contains(num))
+                if (nums[i] != nums[i - 1])
                 {
-                    qntUnico++;
-                    numerosUnicos.Add(num);
-                    j++;
-                }
-                else
-                {
-                    for (int i = j; i < nums.Length - 1; i++)
+                    if(qntUnico != i)
                     {
-                        nums[i] = nums[i + 1];
+                        nums[qntUnico] = nums[i];
                     }
-                    
-                    nums[nums.Length - 1] = num;
+
+                    qntUnico++;
                 }
-
-                contador++;
-
-                if (contador == nums.Length)
-                    break;
             }
-            
+
             return qntUnico;
         }
     }
