@@ -188,6 +188,23 @@ class Program
             Console.WriteLine("Na chave {0} está o {1}", chave, animal.Name);
         }
 
+        // Exemplo de um dicionário com chave string e valor lista de string
+        Dictionary<string, List<string>> meuDicionario = new Dictionary<string, List<string>>();
+
+        meuDicionario.Add("chave1", new List<string> { "valor1", "valor2", "valor3" });
+        meuDicionario.Add("chave2", new List<string> { "valor2", "valor3", "valor4" });
+        meuDicionario.Add("chave3", new List<string> { "valor3", "valor4", "valor5" });
+
+        // Encontrar valores comuns nas listas correspondentes às chaves
+        List<string> valoresComuns = meuDicionario.Values.Aggregate((intersect, current) => intersect.Intersect(current).ToList());
+
+        // Exibindo os valores comuns
+        Console.WriteLine("Valores comuns nas listas das chaves:");
+        foreach (string valor in valoresComuns)
+        {
+            Console.WriteLine(valor);
+        }
+
         #endregion
 
         #region LinkedList
