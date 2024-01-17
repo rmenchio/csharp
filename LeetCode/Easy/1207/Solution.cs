@@ -4,13 +4,11 @@
     {
         public bool UniqueOccurrences(int[] arr)
         {
-            Dictionary<int, int> dicionario = new();
+            Dictionary<int, int> dicionario = new Dictionary<int, int>();
 
-            for (int i = 0; i < arr.Length; i++)
+            foreach (int valor in arr)
             {
-                int valor = arr[i];
-
-                if(dicionario.ContainsKey(valor))
+                if (dicionario.ContainsKey(valor))
                 {
                     dicionario[valor]++;
                 }
@@ -20,12 +18,7 @@
                 }
             }
 
-            if(dicionario.Values.ToList().Count() == dicionario.Values.Distinct().ToList().Count()) 
-            {
-                return true;
-            }
-
-            return false;
+            return dicionario.Count == dicionario.Values.Distinct().Count();
         }
     }
 }
