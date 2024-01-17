@@ -1,14 +1,12 @@
-﻿using LeetCode.Medium._2;
+﻿using LeetCode.Easy._1207;
 class Program
 {
     public static void Main(string[] args)
     {
         var teste = new Solution();
+        int[] lista = { 1, 1, 3, 3, 3, };
 
-        ListNode l1 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9)))))))))));
-        ListNode l2 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9)))));
-
-        Console.WriteLine(teste.AddTwoNumbers(l1, l2));
+        Console.WriteLine(teste.UniqueOccurrences(lista));
         Console.ReadLine();
     }
 }
