@@ -15,6 +15,7 @@
     <None Remove="Easy\26\" />
     <None Remove="Medium\" />
     <None Remove="Medium\2\" />
+    <None Remove="Easy\70\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Easy\9\" />
@@ -23,5 +24,6 @@
     <Folder Include="Easy\26\" />
     <Folder Include="Medium\" />
     <Folder Include="Medium\2\" />
+    <Folder Include="Easy\70\" />
   </ItemGroup>
 </Project>
