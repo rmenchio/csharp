@@ -20,6 +20,13 @@ delegator += pacoteDeAcoes.Engordar;
 
 acoes.InteragirComAnimal(animal2, delegator);
 
+// Da pra criar delegates sem a necessidade de fazer assinaturas, como o abaixo
+
+Action<Animal> action = pacoteDeAcoes.FazerAniversario;
+
+// Aqui precisaria alterar a assinatura do método para aceitar action, ao inves do delegate personalizado.
+// acoes.InteragirComAnimal(animal2, action);
+
 
 
 Console.ReadLine();
