@@ -1,39 +1,31 @@
 ﻿namespace LeetCode.Medium._3
 {
     public class Solution
+{
+    public int LengthOfLongestSubstring(string s)
     {
-        public int LengthOfLongestSubstring(string s)
+        if (string.IsNullOrEmpty(s))
+            return 0;
+
+        int n = s.Length;
+        HashSet<char> charSet = new HashSet<char>();
+        int maiorTamanho = 0, i = 0, j = 0;
+
+        while (i < n && j < n)
         {
-            if (string.IsNullOrEmpty(s)) return 0;
-
-            string palavraAtual = "";
-            int maiorTamanho = 0;
-
-            for (int j = 0; j < s.Length; j++)
+            if (!charSet.Contains(s[j]))
             {
-                int i = j;
-
-                for (; i < s.Length; i++)
-                {
-                    if (!palavraAtual.Contains(s[i]))
-                    {
-                        palavraAtual += s[i];
-
-                        maiorTamanho = palavraAtual.Length > maiorTamanho ? palavraAtual.Length : maiorTamanho;
-                    }
-                    else
-                    {
-                        maiorTamanho = palavraAtual.Length > maiorTamanho ? palavraAtual.Length : maiorTamanho;
-
-                        palavraAtual = "";
-
-                        break;
-                    }
-
-                }
+                charSet.Add(s[j++]);
+                maiorTamanho = Math.Max(maiorTamanho, j - i);
             }
-
-            return maiorTamanho;
+            else
+            {
+                charSet.Remove(s[i++]);
+            }
         }
+
+        return maiorTamanho;
     }
+}
+
 }
