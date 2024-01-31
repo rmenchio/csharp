@@ -1,14 +1,11 @@
-﻿using LeetCode.Easy._455;
+﻿using LeetCode.Medium._150;
 class Program
 {
     public static void Main(string[] args)
     {
         var teste = new Solution();
 
-        int[] filhos = { 1, 2 };
-        int[] cookies = { 1, 2, 3 };
-
-        Console.WriteLine(teste.FindContentChildren(filhos, cookies));
+        Console.WriteLine(teste.EvalRPN(new[] { "2", "1", "+", "3", "*" }));
         Console.ReadLine();
     }
 }
