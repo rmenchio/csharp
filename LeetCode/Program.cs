@@ -1,13 +1,11 @@
-﻿using LeetCode.Medium._1291;
+﻿using LeetCode.Medium._279;
 class Program
 {
     public static void Main(string[] args)
     {
         var teste = new Solution();
 
-        var resultado = teste.SequentialDigits(1000, 13000).ToList();
-
-        resultado.ForEach(Console.WriteLine);
+        Console.WriteLine(teste.NumSquares(12));
         Console.ReadLine();
     }
 }
