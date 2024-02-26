@@ -1,19 +1,14 @@
-﻿using LeetCode.Medium._787;
+﻿using LeetCode.Easy._100;
 class Program
 {
     public static void Main(string[] args)
     {
         var teste = new Solution();
 
-        int[][] flights = new int[][] {
-            new int[] { 0, 1, 100 },
-            new int[] { 1, 2, 100 },
-            new int[] { 2, 0, 100 },
-            new int[] { 1, 3, 600 },
-            new int[] { 2, 3, 200 }
-        };
+        TreeNode p1 = new TreeNode(1, new TreeNode(2), new TreeNode(1));
+        TreeNode p2 = new TreeNode(1, new TreeNode(1), new TreeNode(2));
 
-        Console.WriteLine(teste.FindCheapestPrice(4, flights, 0, 3, 1));
+        Console.WriteLine(teste.IsSameTree(p1, p2));
         Console.ReadLine();
     }
 }
