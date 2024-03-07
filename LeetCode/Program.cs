@@ -1,14 +1,14 @@
 ﻿
-using LeetCode.Medium._513;
+using LeetCode.Easy._876;
 class Program
 {
     public static void Main(string[] args)
     {
         var teste = new Solution();
 
-        TreeNode p1 = new TreeNode(2, new TreeNode(1), new TreeNode(3));
+        ListNode p1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
 
-        Console.WriteLine(teste.FindBottomLeftValue(p1));
+        Console.WriteLine(teste.MiddleNode(p1));
         Console.ReadLine();
     }
 }
