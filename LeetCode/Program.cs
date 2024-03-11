@@ -1,14 +1,15 @@
 ﻿
-using LeetCode.Easy._876;
+using LeetCode.Easy._349;
 class Program
 {
     public static void Main(string[] args)
     {
         var teste = new Solution();
 
-        ListNode p1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+        int[] l1 = { 1, 2, 2, 1 };
+        int[] l2 = { 2, 2 };
 
-        Console.WriteLine(teste.MiddleNode(p1));
+        Console.WriteLine(teste.Intersection(l1, l2));
         Console.ReadLine();
     }
 }
