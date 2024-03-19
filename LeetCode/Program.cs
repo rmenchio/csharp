@@ -1,14 +1,12 @@
 ﻿
-using LeetCode.Medium._1171;
+using LeetCode.Easy._2485;
 class Program
 {
     public static void Main(string[] args)
     {
         var teste = new Solution();
 
-        ListNode head = new(1, new(2, new(-3, new(3, new(1)))));
-
-        Console.WriteLine(teste.RemoveZeroSumSublists(head));
+        Console.WriteLine(teste.PivotInteger(8));
         Console.ReadLine();
     }
 }
