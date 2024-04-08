@@ -34,6 +34,7 @@
     <None Remove="Hard\41\" />
     <None Remove="Medium\713\" />
     <None Remove="Easy\205\" />
+    <None Remove="Easy\1700\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Easy\9\" />
@@ -60,5 +61,6 @@
     <Folder Include="Hard\41\" />
     <Folder Include="Medium\713\" />
     <Folder Include="Easy\205\" />
+    <Folder Include="Easy\1700\" />
   </ItemGroup>
 </Project>
