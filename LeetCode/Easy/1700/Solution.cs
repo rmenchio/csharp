@@ -1,7 +1,5 @@
 ﻿namespace LeetCode.Easy._1700
 {
-    // 1,1,1 (estudantes)
-    // 0,1,1 (sanduiches)
     public class Solution
     {
         public int CountStudents(int[] students, int[] sandwiches)
