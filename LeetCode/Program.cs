@@ -1,12 +1,12 @@
 ﻿
-using LeetCode.Easy._2073;
+using LeetCode.Easy._27;
 class Program
 {
     public static void Main(string[] args)
     {
         var teste = new Solution();
 
-        Console.WriteLine(teste.TimeRequiredToBuy(new [] {5,1,1,1},0));
+        Console.WriteLine(teste.RemoveElement(new [] {3,2,2,3},3));
         Console.ReadLine();
     }
 }
