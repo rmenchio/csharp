@@ -5,15 +5,17 @@
     {
         public int RemoveElement(int[] nums, int val)
         {
-            int k = 0; // Initialize a variable to keep track of non-val elements
+            int k = 0;
+
             for (int i = 0; i < nums.Length; i++)
             {
                 if (nums[i] != val)
                 {
-                    nums[k] = nums[i]; // Move non-val element to the beginning of the array
-                    k++; // Increment k
+                    nums[k] = nums[i];
+                    k++;
                 }
             }
+
             return k;
         }
     }
