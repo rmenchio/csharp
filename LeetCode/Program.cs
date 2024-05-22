@@ -1,12 +1,12 @@
 ﻿
-using LeetCode.Easy._27;
+using LeetCode.Easy._1897;
 class Program
 {
     public static void Main(string[] args)
     {
         var teste = new Solution();
 
-        Console.WriteLine(teste.RemoveElement(new [] {3,2,2,3},3));
+        Console.WriteLine(teste.MakeEqual(new[] { "caaaaa", "aaaaaaaaa", "a", "bbb", "bbbbbbbbb", "bbb", "cc", "cccccccccccc", "ccccccc", "ccccccc", "cc", "cccc", "c", "cccccccc", "c" }));
         Console.ReadLine();
     }
 }
