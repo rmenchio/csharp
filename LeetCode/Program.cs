@@ -1,12 +1,12 @@
 ﻿
-using LeetCode.Easy._28;
+using LeetCode.Easy._35;
 class Program
 {
     public static void Main(string[] args)
     {
         var teste = new Solution();
 
-        Console.WriteLine(teste.StrStr("leetcode", "leeto"));
+        Console.WriteLine(teste.SearchInsert(new[]{ 1,3,5,6}, 5));
         Console.ReadLine();
     }
 }
