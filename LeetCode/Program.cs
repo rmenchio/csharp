@@ -1,12 +1,12 @@
 ﻿
-using LeetCode.Easy._69;
+using LeetCode.Easy._222;
 class Program
 {
     public static void Main(string[] args)
     {
         var teste = new Solution();
 
-        Console.WriteLine(teste.MySqrt(2147483647));
+        Console.WriteLine(teste.CountNodes(null));
         Console.ReadLine();
     }
 }
