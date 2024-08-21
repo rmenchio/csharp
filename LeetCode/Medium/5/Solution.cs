@@ -1,5 +1,6 @@
 ﻿namespace LeetCode.Medium._5
 {
+    // babad
     public class Solution
     {
         public string LongestPalindrome(string s)
