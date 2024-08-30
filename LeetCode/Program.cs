@@ -1,12 +1,12 @@
 ﻿
-using LeetCode.Medium._592;
+using LeetCode.Easy._88;
 class Program
 {
     public static void Main(string[] args)
     {
         var teste = new Solution();
 
-        Console.WriteLine(teste.FractionAddition("7/2+2/3-3/4"));
+        teste.Merge(new int[]{ 1,2,3,0,0,0}, 3, new int[]{ 2,5,6}, 3);
         Console.ReadLine();
     }
 }
